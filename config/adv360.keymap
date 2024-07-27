@@ -76,6 +76,18 @@
             hold-while-undecided;
             retro-tap;
         };
+
+        Tap_Shift: Tap_Shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <200>;
+            tapping-term-ms = <5000>;
+            hold-while-undecided;
+            retro-tap;
+        };
     };
 
     macros {
@@ -86,11 +98,11 @@
 
         default_layer {
             bindings = <
-&Auto_Shift LS(EQUAL) EQUAL   &Auto_Shift LS(N1) N1        &Auto_Shift LS(N2) N2  &Auto_Shift LS(N3) N3  &Auto_Shift LS(N4) N4  &Auto_Shift LS(N5) N5  &tog 1                                                                                                 &mo 3      &Auto_Shift RS(N6) N6  &Auto_Shift RS(N7) N7  &Auto_Shift RS(N8) N8        &Auto_Shift RS(N9) N9      &Auto_Shift RS(N0) N0      &Auto_Shift RS(MINUS) MINUS
-&kp TAB                       &Auto_Shift LS(Q) Q          &Auto_Shift LS(W) W    &Auto_Shift LS(E) E    &Auto_Shift LS(R) R    &Auto_Shift LS(T) T    &none                                                                                                  &none      &Auto_Shift RS(Y) Y    &Auto_Shift RS(U) U    &Auto_Shift RS(I) I          &Auto_Shift RS(O) O        &Auto_Shift RS(P) P        &Auto_Shift RS(BSLH) BSLH
-&kp ESC                       &Auto_Shift LS(A) A          &Auto_Shift LS(S) S    &Auto_Shift LS(D) D    &Auto_Shift LS(F) F    &Auto_Shift LS(G) G    &none     &Tap_Repeat LEFT_CONTROL 0  &Hold_Tap_Sticky LALT LSHFT      &kp LGUI   &Tap_Repeat RCTRL 0  &none      &Auto_Shift RS(H) H    &Auto_Shift RS(J) J    &Auto_Shift RS(K) K          &Auto_Shift RS(L) L        &Auto_Shift RS(SEMI) SEMI  &Auto_Shift RS(SQT) SQT
-&Hold_Tap_Sticky LSHFT LSHFT  &Auto_Shift LS(Z) Z          &Auto_Shift LS(X) X    &Auto_Shift LS(C) C    &Auto_Shift LS(V) V    &Auto_Shift LS(B) B                                          &kp HOME                         &kp PG_UP                                  &Auto_Shift RS(N) N    &Auto_Shift RS(M) M    &Auto_Shift RS(COMMA) COMMA  &Auto_Shift RS(DOT) DOT    &Auto_Shift RS(FSLH) FSLH  &Hold_Tap_Sticky RSHFT RSHFT
-&mo 2                         &Auto_Shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &kp BSPC  &kp DEL                     &kp END                          &kp PG_DN  &kp ENTER            &kp SPACE                         &kp UP                 &kp DOWN                     &Auto_Shift RS(LBKT) LBKT  &Auto_Shift RS(RBKT) RBKT  &mo 2
+&Auto_Shift LS(EQUAL) EQUAL   &Auto_Shift LS(N1) N1        &Auto_Shift LS(N2) N2  &Auto_Shift LS(N3) N3  &Auto_Shift LS(N4) N4  &Auto_Shift LS(N5) N5  &tog 1                                                                                                    &mo 3      &Auto_Shift RS(N6) N6  &Auto_Shift RS(N7) N7  &Auto_Shift RS(N8) N8        &Auto_Shift RS(N9) N9      &Auto_Shift RS(N0) N0      &Auto_Shift RS(MINUS) MINUS
+&kp TAB                       &Auto_Shift LS(Q) Q          &Auto_Shift LS(W) W    &Auto_Shift LS(E) E    &Auto_Shift LS(R) R    &Auto_Shift LS(T) T    &none                                                                                                     &none      &Auto_Shift RS(Y) Y    &Auto_Shift RS(U) U    &Auto_Shift RS(I) I          &Auto_Shift RS(O) O        &Auto_Shift RS(P) P        &Auto_Shift RS(BSLH) BSLH
+&kp ESC                       &Auto_Shift LS(A) A          &Auto_Shift LS(S) S    &Auto_Shift LS(D) D    &Auto_Shift LS(F) F    &Auto_Shift LS(G) G    &none     &Tap_Repeat LEFT_CONTROL 0  &Hold_Tap_Sticky LALT LSHFT      &kp LGUI   &Tap_Repeat RCTRL 0     &none      &Auto_Shift RS(H) H    &Auto_Shift RS(J) J    &Auto_Shift RS(K) K          &Auto_Shift RS(L) L        &Auto_Shift RS(SEMI) SEMI  &Auto_Shift RS(SQT) SQT
+&Hold_Tap_Sticky LSHFT LSHFT  &Auto_Shift LS(Z) Z          &Auto_Shift LS(X) X    &Auto_Shift LS(C) C    &Auto_Shift LS(V) V    &Auto_Shift LS(B) B                                          &kp HOME                         &kp PG_UP                                     &Auto_Shift RS(N) N    &Auto_Shift RS(M) M    &Auto_Shift RS(COMMA) COMMA  &Auto_Shift RS(DOT) DOT    &Auto_Shift RS(FSLH) FSLH  &Hold_Tap_Sticky RSHFT RSHFT
+&mo 2                         &Auto_Shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &kp BSPC  &Tap_Shift LSHFT DEL        &kp END                          &kp PG_DN  &Tap_Shift RSHFT ENTER  &kp SPACE                         &kp UP                 &kp DOWN                     &Auto_Shift RS(LBKT) LBKT  &Auto_Shift RS(RBKT) RBKT  &mo 2
             >;
         };
 
