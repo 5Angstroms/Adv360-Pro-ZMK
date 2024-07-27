@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <400>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
@@ -101,6 +101,11 @@
             bindings = <&kp CAPS>;
             key-positions = <66 69>;
             layers = <0>;
+        };
+
+        Combo_Tab {
+            bindings = <&kp TAB>;
+            key-positions = <32 41>;
         };
     };
 
