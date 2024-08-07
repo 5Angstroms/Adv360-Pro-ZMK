@@ -54,6 +54,7 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <125>;
             retro-tap;
+            hold-while-undecided;
         };
 
         Sticky_Lazy: Sticky_Lazy {
@@ -86,7 +87,6 @@
             #binding-cells = <2>;
             quick-tap-ms = <200>;
             tapping-term-ms = <5000>;
-            hold-while-undecided;
             retro-tap;
         };
 
@@ -142,21 +142,21 @@
 
         engram {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5     &trans                                                                                                  &mo 5             &kp N6             &kp N7  &kp N8    &kp N9  &kp N0    &kp PERCENT
-&kp Q      &kp B     &kp Y   &kp O     &kp U      &kp APOS   &none                                                                                                   &kp C_PLAY_PAUSE  &kp DOUBLE_QUOTES  &kp L   &kp D     &kp W   &kp V     &kp Z
-&kp ESC    &kp C     &kp I   &kp E     &kp A      &kp COMMA  &none   &Tap_Repeat LEFT_CONTROL 0  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &Tap_Repeat RCTRL 0  &kp CAPS          &kp PERIOD         &kp H   &kp T     &kp S   &kp N     &kp ENTER
-&kp DEL    &kp G     &kp X   &kp J     &kp K      &kp UNDER                                      &kp HOME                            &kp PG_UP                                         &kp QUESTION       &kp R   &kp M     &kp F   &kp P     &kp BACKSPACE
-&mo 4      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT             &mo 2   &mo 3                       &kp END                             &kp PG_DN  &kp TAB              &kp SPACE                            &kp UP  &kp DOWN  &kp GT  &kp RBKT  &mo 4
+&kp GRAVE                  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5     &trans                                                                                                  &mo 5             &kp N6             &kp N7  &kp N8    &kp N9  &kp N0    &kp PERCENT
+&kp Q                      &kp B     &kp Y   &kp O     &kp U      &kp APOS   &none                                                                                                   &kp C_PLAY_PAUSE  &kp DOUBLE_QUOTES  &kp L   &kp D     &kp W   &kp V     &kp Z
+&kp ESC                    &kp C     &kp I   &kp E     &kp A      &kp COMMA  &none   &Tap_Repeat LEFT_CONTROL 0  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &Tap_Repeat RCTRL 0  &kp CAPS          &kp PERIOD         &kp H   &kp T     &kp S   &kp N     &kp ENTER
+&TapKey_HoldMod LSHFT DEL  &kp G     &kp X   &kp J     &kp K      &kp UNDER                                      &kp HOME                            &kp PG_UP                                         &kp QUESTION       &kp R   &kp M     &kp F   &kp P     &TapKey_HoldMod RSHIFT BACKSPACE
+&mo 4                      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT             &mo 2   &mo 3                       &kp END                             &kp PG_DN  &kp TAB              &kp SPACE                            &kp UP  &kp DOWN  &kp GT  &kp RBKT  &mo 4
             >;
         };
 
         shift_engram {
             bindings = <
-&kp TILDE                          &kp BACKSLASH   &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT           &none                                                                    &mo 5             &kp CARET              &kp SLASH  &kp STAR   &kp MINUS  &kp PLUS         &kp PERCENT
-&kp LS(Q)                          &kp LS(B)       &kp LS(Y)  &kp LS(O)  &kp LS(U)   &kp LEFT_PARENTHESIS  &kp AMPERSAND                                                            &kp C_PLAY_PAUSE  &kp RIGHT_PARENTHESIS  &kp LS(L)  &kp LS(D)  &kp LS(W)  &kp LS(V)        &kp LS(Z)
-&kp LS(ESC)                        &kp LS(C)       &kp LS(I)  &kp LS(E)  &kp LS(A)   &kp SEMI              &kp PIPE       &trans  &trans            &kp LS(LWIN)       &trans       &kp CAPS          &kp COLON              &kp LS(H)  &kp LS(T)  &kp LS(S)  &kp LS(N)        &kp LS(ENTER)
-&TapKey_HoldMod LS(LCTRL) LS(DEL)  &kp LS(G)       &kp LS(X)  &kp LS(J)  &kp LS(K)   &kp EQUAL                                    &kp LS(HOME)      &kp LS(PAGE_UP)                                   &kp EXCL               &kp LS(R)  &kp LS(M)  &kp LS(F)  &kp LS(P)        &TapKey_HoldMod LS(RIGHT_CONTROL) LS(BACKSPACE)
-&mo 4                              &kp LEFT_BRACE  &kp LT     &kp LEFT   &kp RIGHT                         &trans         &trans  &kp LS(END)       &kp LS(PAGE_DOWN)  &kp LS(TAB)  &kp LS(SPACE)                            &kp UP     &kp DOWN   &kp GT     &kp RIGHT_BRACE  &mo 4
+&kp TILDE                       &kp BACKSLASH   &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT           &none                                                                    &mo 5             &kp CARET              &kp SLASH  &kp STAR   &kp MINUS  &kp PLUS         &kp PERCENT
+&kp LS(Q)                       &kp LS(B)       &kp LS(Y)  &kp LS(O)  &kp LS(U)   &kp LEFT_PARENTHESIS  &kp AMPERSAND                                                            &kp C_PLAY_PAUSE  &kp RIGHT_PARENTHESIS  &kp LS(L)  &kp LS(D)  &kp LS(W)  &kp LS(V)        &kp LS(Z)
+&kp LS(ESC)                     &kp LS(C)       &kp LS(I)  &kp LS(E)  &kp LS(A)   &kp SEMI              &kp PIPE       &trans  &trans            &kp LS(LWIN)       &trans       &kp CAPS          &kp COLON              &kp LS(H)  &kp LS(T)  &kp LS(S)  &kp LS(N)        &kp LS(ENTER)
+&TapKey_HoldMod LSHIFT LS(DEL)  &kp LS(G)       &kp LS(X)  &kp LS(J)  &kp LS(K)   &kp EQUAL                                    &kp LS(HOME)      &kp LS(PAGE_UP)                                   &kp EXCL               &kp LS(R)  &kp LS(M)  &kp LS(F)  &kp LS(P)        &TapKey_HoldMod RSHIFT LS(BACKSPACE)
+&mo 4                           &kp LEFT_BRACE  &kp LT     &kp LEFT   &kp RIGHT                         &trans         &trans  &kp LS(END)       &kp LS(PAGE_DOWN)  &kp LS(TAB)  &kp LS(SPACE)                            &kp UP     &kp DOWN   &kp GT     &kp RIGHT_BRACE  &mo 4
             >;
         };
 
