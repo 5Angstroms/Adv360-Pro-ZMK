@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -133,38 +132,38 @@
 
         qwerty {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                                      &mo 5             &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &none                                                                                       &kp C_PLAY_PAUSE  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &none           &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &kp RCTRL  &kp CAPS          &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp DEL    &kp Z      &kp X   &kp C     &kp V      &kp B                                     &kp HOME                            &kp PG_UP                               &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSPACE
-&mo 4      &kp GRAVE  &mo 3   &kp LEFT  &kp RIGHT          &kp LEFT_SHIFT  &mo 3             &kp END                             &kp PG_DN  &kp ENTER  &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 4
+&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                                      &mo 5        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &none                                                                                       &key_repeat  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &none           &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &kp RCTRL  &kp CAPS     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp DEL    &kp Z      &kp X   &kp C     &kp V      &kp B                                     &kp HOME                            &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSPACE
+&mo 4      &kp GRAVE  &mo 3   &kp LEFT  &kp RIGHT          &kp LEFT_SHIFT  &mo 3             &kp END                             &kp PG_DN  &kp ENTER  &kp SPACE            &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 4
             >;
         };
 
         engram {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5     &trans                                                                                     &mo 5             &kp N6             &kp N7  &kp N8    &kp N9  &kp N0    &kp PERCENT
-&kp Q      &kp B     &kp Y   &kp O     &kp U      &kp APOS   &kp BACKSLASH                                                                              &kp C_PLAY_PAUSE  &kp DOUBLE_QUOTES  &kp L   &kp D     &kp W   &kp V     &kp Z
-&kp ESC    &kp C     &kp I   &kp E     &kp A      &kp COMMA  &kp AMPERSAND  &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &kp RCTRL  &kp CAPS          &kp PERIOD         &kp H   &kp T     &kp S   &kp N     &kp TAB
-&kp DEL    &kp G     &kp X   &kp J     &kp K      &kp UNDER                                   &kp HOME                            &kp PG_UP                               &kp QUESTION       &kp R   &kp M     &kp F   &kp P     &kp BACKSPACE
-&mo 4      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT             &mo 2          &mo 3             &kp END                             &kp PG_DN  &kp ENTER  &kp SPACE                            &kp UP  &kp DOWN  &kp GT  &kp RBKT  &mo 4
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5     &trans                                                                                     &mo 5        &kp N6             &kp N7  &kp N8    &kp N9  &kp N0    &kp PERCENT
+&kp Q      &kp B     &kp Y   &kp O     &kp U      &kp APOS   &kp BACKSLASH                                                                              &key_repeat  &kp DOUBLE_QUOTES  &kp L   &kp D     &kp W   &kp V     &kp Z
+&kp ESC    &kp C     &kp I   &kp E     &kp A      &kp COMMA  &kp AMPERSAND  &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &kp RCTRL  &kp CAPS     &kp PERIOD         &kp H   &kp T     &kp S   &kp N     &kp TAB
+&kp DEL    &kp G     &kp X   &kp J     &kp K      &kp UNDER                                   &kp HOME                            &kp PG_UP                          &kp QUESTION       &kp R   &kp M     &kp F   &kp P     &kp BACKSPACE
+&mo 4      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT             &mo 2          &mo 3             &kp END                             &kp PG_DN  &kp ENTER  &kp SPACE                       &kp UP  &kp DOWN  &kp GT  &kp RBKT  &mo 4
             >;
         };
 
         shift_engram {
             bindings = <
-&kp TILDE       &kp EXCL        &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT           &none                                                                                        &mo 5             &kp CARET              &kp SLASH  &kp STAR   &kp MINUS  &kp PLUS         &kp PERCENT
-&kp LS(Q)       &kp LS(B)       &kp LS(Y)  &kp LS(O)  &kp LS(U)   &kp LEFT_PARENTHESIS  &kp SLASH                                                                                    &kp C_PLAY_PAUSE  &kp RIGHT_PARENTHESIS  &kp LS(L)  &kp LS(D)  &kp LS(W)  &kp LS(V)        &kp LS(Z)
-&kp LS(ESC)     &kp LS(C)       &kp LS(I)  &kp LS(E)  &kp LS(A)   &kp SEMI              &kp PIPE   &kp LS(LEFT_CONTROL)  &trans            &kp LS(LWIN)       &kp LS(RIGHT_CONTROL)  &kp CAPS          &kp COLON              &kp LS(H)  &kp LS(T)  &kp LS(S)  &kp LS(N)        &kp LS(TAB)
-&kp LS(DELETE)  &kp LS(G)       &kp LS(X)  &kp LS(J)  &kp LS(K)   &kp EQUAL                                              &kp LS(HOME)      &kp LS(PAGE_UP)                                             &kp EXCL               &kp LS(R)  &kp LS(M)  &kp LS(F)  &kp LS(P)        &kp LS(BACKSPACE)
-&mo 4           &kp LEFT_BRACE  &kp LT     &kp LEFT   &kp RIGHT                         &trans     &trans                &kp LS(END)       &kp LS(PAGE_DOWN)  &kp LS(ENTER)          &kp LS(SPACE)                            &kp UP     &kp DOWN   &kp GT     &kp RIGHT_BRACE  &mo 4
+&kp TILDE       &kp EXCL        &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT           &none                                                                                        &mo 5          &kp CARET              &kp SLASH  &kp STAR   &kp MINUS  &kp PLUS         &kp PERCENT
+&kp LS(Q)       &kp LS(B)       &kp LS(Y)  &kp LS(O)  &kp LS(U)   &kp LEFT_PARENTHESIS  &kp SLASH                                                                                    &key_repeat    &kp RIGHT_PARENTHESIS  &kp LS(L)  &kp LS(D)  &kp LS(W)  &kp LS(V)        &kp LS(Z)
+&kp LS(ESC)     &kp LS(C)       &kp LS(I)  &kp LS(E)  &kp LS(A)   &kp SEMI              &kp PIPE   &kp LS(LEFT_CONTROL)  &trans            &kp LS(LWIN)       &kp LS(RIGHT_CONTROL)  &kp CAPS       &kp COLON              &kp LS(H)  &kp LS(T)  &kp LS(S)  &kp LS(N)        &kp LS(TAB)
+&kp LS(DELETE)  &kp LS(G)       &kp LS(X)  &kp LS(J)  &kp LS(K)   &kp EQUAL                                              &kp LS(HOME)      &kp LS(PAGE_UP)                                          &kp EXCL               &kp LS(R)  &kp LS(M)  &kp LS(F)  &kp LS(P)        &kp LS(BACKSPACE)
+&mo 4           &kp LEFT_BRACE  &kp LT     &kp LEFT   &kp RIGHT                         &trans     &trans                &kp LS(END)       &kp LS(PAGE_DOWN)  &kp LS(ENTER)          &kp LS(SPACE)                         &kp UP     &kp DOWN   &kp GT     &kp RIGHT_BRACE  &mo 4
             >;
         };
 
         keypad {
             bindings = <
 &kp TILDE  &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT           &kp INS                                                       &kp KP_NUMLOCK  &kp CARET              &kp SLASH  &kp STAR  &kp MINUS  &kp PLUS   &kp PERCENT
-&trans     &none     &none   &none      &none       &kp LEFT_PARENTHESIS  &kp SLASH                                                     &kp C_PP        &kp RIGHT_PARENTHESIS  &kp N7     &kp N8    &kp N9     &kp MINUS  &none
+&trans     &none     &none   &none      &none       &kp LEFT_PARENTHESIS  &kp SLASH                                                     &key_repeat     &kp RIGHT_PARENTHESIS  &kp N7     &kp N8    &kp N9     &kp MINUS  &none
 &kp ESC    &none     &none   &none      &none       &kp SEMI              &kp PIPE   &trans  &kp C_PP        &kp C_PP           &trans  &kp CAPS        &kp COLON              &kp N4     &kp N5    &kp N6     &kp PLUS   &trans
 &trans     &none     &none   &none      &none       &kp EQUAL                                &kp C_PREV      &kp C_VOLUME_UP                            &kp EXCL               &kp N1     &kp N2    &kp N3     &kp ENTER  &trans
 &mo 4      &none     &none   &kp LEFT   &kp RIGHT                         &trans     &trans  &kp C_NEXT      &kp C_VOLUME_DOWN  &trans  &kp N0                                 &kp UP     &kp DOWN  &kp DOT    &kp ENTER  &mo 4
@@ -173,11 +172,11 @@
 
         fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4          &kp F5           &kp F6  &tog 3                                      &mo 5   &kp F7  &kp F8        &kp F9          &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans          &trans           &trans  &trans                                      &none   &trans  &trans        &trans          &trans   &trans   &trans
-&trans  &trans  &trans  &trans          &trans           &trans  &trans  &trans  &trans      &trans  &trans  &none   &trans  &trans        &trans          &trans   &trans   &trans
-&trans  &trans  &trans  &trans          &trans           &trans                  &trans      &trans                  &trans  &trans        &trans          &trans   &trans   &trans
-&trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_RIGHT          &trans  &trans  &trans      &trans  &trans  &trans          &msc SCRL_UP  &msc SCRL_DOWN  &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 3                                      &mo 5   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
