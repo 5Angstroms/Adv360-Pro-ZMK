@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-macro";
             label = "macro_version";
             #binding-cells = <0>;
-            bindings = <&kp RET>;
+            bindings = <>;
         };
 
         #endif
@@ -23,36 +23,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
+            tapping-term-ms = <400>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
 
-        Auto_Shift: Auto_Shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTO_SHIFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-
-            require-prior-idle-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <65 70>;
-            retro-tap;
-        };
-
-        Tap_Repeat: Tap_Repeat {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_REPEAT";
-            bindings = <&kp>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <125>;
-            retro-tap;
+            quick-tap-ms = <175>;
         };
 
         Sticky_Lazy: Sticky_Lazy {
@@ -65,64 +40,185 @@
             lazy;
         };
 
-        Hold_Tap_Sticky: Hold_Tap_Sticky {
+        TapKey_HoldMod: TapKey_HoldMod {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_STICKY";
-            bindings = <&kp>, <&Sticky_Lazy>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <500>;
-            hold-while-undecided;
-            retro-tap;
-        };
-
-        Tap_Shift: Tap_Shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_SHIFT";
+            label = "TAPKEY_HOLDMOD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             quick-tap-ms = <200>;
             tapping-term-ms = <5000>;
-            hold-while-undecided;
             retro-tap;
+        };
+
+        e_SQT_LPAR: e_SQT_LPAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_SQT_LPAR";
+            bindings = <&kp SQT>, <&kp LPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_DQT_RPAR: e_DQT_RPAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_DQT_RPAR";
+            bindings = <&kp DQT>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_com_semi: e_com_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_COM_SEMI";
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_under_equals: e_under_equals {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_UNDER_EQUALS";
+            bindings = <&kp UNDER>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_Qmark_Excl: e_Qmark_Excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_QMARK_EXCL";
+            bindings = <&kp QMARK>, <&kp EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_period_colon: e_period_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_PERIOD_COLON";
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_7_Fslash: e_7_Fslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_7_FSLASH";
+            bindings = <&kp N7>, <&kp SLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_9_minus: e_9_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_9_MINUS";
+            bindings = <&kp N9>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_0_plus: e_0_plus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_0_PLUS";
+            bindings = <&kp N0>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_backslash: e_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_BACKSLASH";
+            bindings = <&kp BACKSLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_slash: e_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_SLASH";
+            bindings = <&kp SLASH>, <&kp SLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_and_or: e_and_or {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_AND_OR";
+            bindings = <&kp AMPS>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        next_prev_tap_dance: next_prev_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEXT_PREV_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp C_NEXT>, <&kp C_PREV>;
         };
     };
 
     macros {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Combo_Tab {
+            bindings = <&kp TAB>;
+            key-positions = <32 41>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty {
             bindings = <
-&Auto_Shift LS(EQUAL) EQUAL   &Auto_Shift LS(N1) N1        &Auto_Shift LS(N2) N2  &Auto_Shift LS(N3) N3  &Auto_Shift LS(N4) N4  &Auto_Shift LS(N5) N5  &tog 1                                                                                                    &mo 3      &Auto_Shift RS(N6) N6  &Auto_Shift RS(N7) N7  &Auto_Shift RS(N8) N8        &Auto_Shift RS(N9) N9      &Auto_Shift RS(N0) N0      &Auto_Shift RS(MINUS) MINUS
-&kp TAB                       &Auto_Shift LS(Q) Q          &Auto_Shift LS(W) W    &Auto_Shift LS(E) E    &Auto_Shift LS(R) R    &Auto_Shift LS(T) T    &none                                                                                                     &none      &Auto_Shift RS(Y) Y    &Auto_Shift RS(U) U    &Auto_Shift RS(I) I          &Auto_Shift RS(O) O        &Auto_Shift RS(P) P        &Auto_Shift RS(BSLH) BSLH
-&kp ESC                       &Auto_Shift LS(A) A          &Auto_Shift LS(S) S    &Auto_Shift LS(D) D    &Auto_Shift LS(F) F    &Auto_Shift LS(G) G    &none     &Tap_Repeat LEFT_CONTROL 0  &Hold_Tap_Sticky LALT LSHFT      &kp LGUI   &Tap_Repeat RCTRL 0     &none      &Auto_Shift RS(H) H    &Auto_Shift RS(J) J    &Auto_Shift RS(K) K          &Auto_Shift RS(L) L        &Auto_Shift RS(SEMI) SEMI  &Auto_Shift RS(SQT) SQT
-&Hold_Tap_Sticky LSHFT LSHFT  &Auto_Shift LS(Z) Z          &Auto_Shift LS(X) X    &Auto_Shift LS(C) C    &Auto_Shift LS(V) V    &Auto_Shift LS(B) B                                          &kp HOME                         &kp PG_UP                                     &Auto_Shift RS(N) N    &Auto_Shift RS(M) M    &Auto_Shift RS(COMMA) COMMA  &Auto_Shift RS(DOT) DOT    &Auto_Shift RS(FSLH) FSLH  &Hold_Tap_Sticky RSHFT RSHFT
-&mo 2                         &Auto_Shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &kp BSPC  &Tap_Shift LSHFT DEL        &kp END                          &kp PG_DN  &Tap_Shift RSHFT ENTER  &kp SPACE                         &kp UP                 &kp DOWN                     &Auto_Shift RS(LBKT) LBKT  &Auto_Shift RS(RBKT) RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                                      &mo 4        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &none                                                                                       &key_repeat  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &none           &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &kp RCTRL  &kp CAPS     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp DEL    &kp Z      &kp X   &kp C     &kp V      &kp B                                     &kp HOME                            &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSPACE
+&mo 3      &kp GRAVE  &mo 2   &kp LEFT  &kp RIGHT          &kp LEFT_SHIFT  &mo 2             &kp END                             &kp PG_DN  &kp ENTER  &kp SPACE            &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
+            >;
+        };
+
+        engram {
+            bindings = <
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5           &trans                                                                                           &mo 4        &kp N6           &e_7_Fslash  &kp N8    &e_9_minus  &e_0_plus  &kp CAPS
+&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR      &e_backslash                                                                                     &e_slash     &e_DQT_RPAR      &kp L        &kp D     &kp W       &kp V      &kp Z
+&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi      &e_and_or     &kp LEFT_CONTROL  &kp LWIN          &TapKey_HoldMod LEFT_ALT LS(LG(S))  &kp RCTRL  &kp PERCENT  &e_period_colon  &kp H        &kp T     &kp S       &kp N      &kp Q
+&kp DEL    &kp G     &kp X   &kp J     &kp K      &e_under_equals                                  &kp C_VOL_UP      &next_prev_tap_dance                                        &e_Qmark_Excl    &kp R        &kp M     &kp F       &kp P      &kp BACKSPACE
+&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT                   &kp LSHIFT    &mo 2             &kp C_VOL_DN      &kp C_PP                            &kp ENTER  &kp SPACE                     &kp UP       &kp DOWN  &kp GT      &kp RBKT   &mo 3
             >;
         };
 
         keypad {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
+&trans  &trans  &trans  &trans  &trans  &trans  &kp INSERT                                      &kp KP_CLEAR  &kp CARET  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                          &trans        &trans     &kp N7         &kp N8           &kp N9        &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans  &trans  &trans        &trans     &kp N4         &kp N5           &kp N6        &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans      &trans                        &trans     &kp N1         &kp N2           &kp N3        &kp ENTER  &trans
+&trans  &trans  &trans  &trans  &trans          &trans      &trans  &trans      &trans  &trans  &kp N0                   &trans         &trans           &kp DOT       &kp ENTER  &trans
             >;
         };
 
         fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4    &kp F5   &kp F6  &tog 2                                      &mo 4   &kp F7  &kp F8       &kp F9         &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans    &trans   &trans  &trans                                      &trans  &trans  &trans       &trans         &trans   &trans   &trans
+&trans  &trans  &trans  &trans    &trans   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans       &trans         &trans   &trans   &trans
+&trans  &trans  &trans  &trans    &trans   &trans                  &trans      &trans                  &trans  &trans       &trans         &trans   &trans   &trans
+&trans  &trans  &trans  &kp HOME  &kp END          &trans  &trans  &trans      &trans  &trans  &trans          &kp PAGE_UP  &kp PAGE_DOWN  &trans   &trans   &trans
             >;
         };
 
@@ -130,9 +226,49 @@
             bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none         &trans       &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        shift_engram {
+            bindings = <
+&kp TILDE       &kp EXCL        &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT           &none                                                                                        &mo 4          &kp CARET              &kp SLASH  &kp STAR   &kp MINUS  &kp PLUS         &kp PERCENT
+&kp LS(Q)       &kp LS(B)       &kp LS(Y)  &kp LS(O)  &kp LS(U)   &kp LEFT_PARENTHESIS  &kp SLASH                                                                                    &key_repeat    &kp RIGHT_PARENTHESIS  &kp LS(L)  &kp LS(D)  &kp LS(W)  &kp LS(V)        &kp LS(Z)
+&kp LS(ESC)     &kp LS(C)       &kp LS(I)  &kp LS(E)  &kp LS(A)   &kp SEMI              &kp PIPE   &kp LS(LEFT_CONTROL)  &trans             &kp LS(LEFT_ALT)  &kp LS(RIGHT_CONTROL)  &kp CAPS       &kp COLON              &kp LS(H)  &kp LS(T)  &kp LS(S)  &kp LS(N)        &kp LS(TAB)
+&kp LS(DELETE)  &kp LS(G)       &kp LS(X)  &kp LS(J)  &kp LS(K)   &kp EQUAL                                              &kp LS(PG_UP)      &kp LS(LWIN)                                            &kp EXCL               &kp LS(R)  &kp LS(M)  &kp LS(F)  &kp LS(P)        &kp LS(BACKSPACE)
+&mo 3           &kp LEFT_BRACE  &kp LT     &kp LEFT   &kp RIGHT                         &trans     &trans                &kp LS(PG_DN)      &trans            &kp LS(ENTER)          &kp LS(SPACE)                         &kp UP     &kp DOWN   &kp GT     &kp RIGHT_BRACE  &mo 3
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5     &trans                                                                                        &mo 4        &kp N6        &kp N7  &kp N8    &kp N9  &kp N0    &kp PERCENT
+&kp TAB    &kp B     &kp Y   &kp O     &kp U      &kp SQT    &kp BACKSLASH                                                                                 &key_repeat  &kp DQT       &kp L   &kp D     &kp W   &kp V     &kp Z
+&kp ESC    &kp C     &kp I   &kp E     &kp A      &kp COMMA  &kp AMPERSAND  &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LEFT_ALT  &kp RCTRL  &kp CAPS     &kp PERIOD    &kp H   &kp T     &kp S   &kp N     &kp Q
+&kp DEL    &kp G     &kp X   &kp J     &kp K      &kp UNDER                                   &kp PG_UP                           &kp LWIN                              &kp QUESTION  &kp R   &kp M     &kp F   &kp P     &kp BACKSPACE
+&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT             &mo 6          &mo 0             &kp PG_DN                           &mo 0         &kp ENTER  &kp SPACE                  &kp UP  &kp DOWN  &kp GT  &kp RBKT  &mo 3
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&kp TILDE       &kp EXCL        &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT           &none                                                                                        &mo 4          &kp CARET              &kp SLASH  &kp STAR   &kp MINUS  &kp PLUS         &kp PERCENT
+&kp LS(Q)       &kp LS(B)       &kp LS(Y)  &kp LS(O)  &kp LS(U)   &kp LEFT_PARENTHESIS  &kp SLASH                                                                                    &key_repeat    &kp RIGHT_PARENTHESIS  &kp LS(L)  &kp LS(D)  &kp LS(W)  &kp LS(V)        &kp LS(Z)
+&kp LS(ESC)     &kp LS(C)       &kp LS(I)  &kp LS(E)  &kp LS(A)   &kp SEMI              &kp PIPE   &kp LS(LEFT_CONTROL)  &trans             &kp LS(LEFT_ALT)  &kp LS(RIGHT_CONTROL)  &kp CAPS       &kp COLON              &kp LS(H)  &kp LS(T)  &kp LS(S)  &kp LS(N)        &kp LS(TAB)
+&kp LS(DELETE)  &kp LS(G)       &kp LS(X)  &kp LS(J)  &kp LS(K)   &kp EQUAL                                              &kp LS(PG_UP)      &kp LS(LWIN)                                            &kp EXCL               &kp LS(R)  &kp LS(M)  &kp LS(F)  &kp LS(P)        &kp LS(BACKSPACE)
+&mo 3           &kp LEFT_BRACE  &kp LT     &kp LEFT   &kp RIGHT                         &trans     &trans                &kp LS(PG_DN)      &trans            &kp LS(ENTER)          &kp LS(SPACE)                         &kp UP     &kp DOWN   &kp GT     &kp RIGHT_BRACE  &mo 3
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&kp TILDE  &kp EXCL   &kp AT     &kp POUND  &kp DOLLAR  &kp PERCENT           &kp INS                                                  &kp KP_CLEAR  &kp CARET              &kp SLASH  &kp STAR  &kp MINUS  &kp PLUS   &kp PERCENT
+&trans     &kp PG_UP  &kp HOME   &kp UP     &kp END     &kp LEFT_PARENTHESIS  &kp SLASH                                                &key_repeat   &kp RIGHT_PARENTHESIS  &kp N7     &kp N8    &kp N9     &kp MINUS  &none
+&kp ESC    &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SEMI              &kp PIPE   &trans  &kp C_PP        &kp C_VOL_UP  &trans  &kp CAPS      &kp COLON              &kp N4     &kp N5    &kp N6     &kp PLUS   &trans
+&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)   &kp EQUAL                                &kp C_PREV      &kp C_VOL_DN                        &kp EXCL               &kp N1     &kp N2    &kp N3     &kp ENTER  &trans
+&mo 3      &none      &none      &kp LEFT   &kp RIGHT                         &trans     &trans  &kp C_NEXT      &trans        &trans  &kp N0                               &kp UP     &kp DOWN  &kp DOT    &kp ENTER  &mo 3
             >;
         };
     };
