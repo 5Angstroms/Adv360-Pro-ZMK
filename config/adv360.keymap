@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 40    // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2400  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <dt-bindings/zmk/stp.h>
 #include <behaviors.dtsi>
@@ -13,7 +13,7 @@
 
 &mmv { acceleration-exponent = <1>; };
 
-&msc { acceleration-exponent = <1>; };
+&msc { acceleration-exponent = <0>; };
 
 / {
     behaviors {
