@@ -59,15 +59,14 @@
             lazy;
         };
 
-        TapKey_HoldMod: TapKey_HoldMod {
+        hold_quick_tap: hold_quick_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAPKEY_HOLDMOD";
+            label = "HOLD_QUICK_TAP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             quick-tap-ms = <200>;
-            tapping-term-ms = <5000>;
-            retro-tap;
+            tapping-term-ms = <0>;
         };
 
         e_SQT_LPAR: e_SQT_LPAR {
@@ -178,25 +177,25 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        next_prev_tap_dance: next_prev_tap_dance {
+        pp_next_prev_tap_dance: pp_next_prev_tap_dance {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEXT_PREV_TAP_DANCE";
+            label = "PP_NEXT_PREV_TAP_DANCE";
             #binding-cells = <0>;
-            bindings = <&kp C_NEXT>, <&kp C_PREV>;
+            bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
+        };
+
+        c_vol_up_down_tap_dance: c_vol_up_down_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "C_VOL_UP_DOWN_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
     };
 
     macros {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        Combo_Tab {
-            bindings = <&kp TAB>;
-            key-positions = <32 41>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -205,7 +204,7 @@
             bindings = <
 &kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                                      &mo 4        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &none                                                                                       &key_repeat  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &none           &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LGUI   &kp RCTRL  &kp CAPS     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &none           &kp LEFT_CONTROL  &hold_quick_tap LALT LS(LG(S))      &kp LGUI   &kp RCTRL  &kp CAPS     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp DEL    &kp Z      &kp X   &kp C     &kp V      &kp B                                     &kp HOME                            &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSPACE
 &mo 3      &kp GRAVE  &mo 2   &kp LEFT  &kp RIGHT          &kp LEFT_SHIFT  &mo 2             &kp END                             &kp PG_DN  &kp ENTER  &kp SPACE            &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
             >;
@@ -213,21 +212,21 @@
 
         engram {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5           &trans                                                                                           &mo 4        &kp N6           &e_7_Fslash  &kp N8    &e_9_minus  &e_0_plus  &kp CAPS
-&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR      &e_backslash                                                                                     &e_slash     &e_DQT_RPAR      &kp L        &kp D     &kp W       &kp V      &kp Z
-&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi      &e_and_or     &kp LEFT_CONTROL  &kp LWIN          &TapKey_HoldMod LEFT_ALT LS(LG(S))  &kp RCTRL  &kp PERCENT  &e_period_colon  &kp H        &kp T     &kp S       &kp N      &kp Q
-&kp DEL    &kp G     &kp X   &kp J     &kp K      &e_under_equals                                  &kp C_VOL_UP      &next_prev_tap_dance                                        &e_Qmark_Excl    &kp R        &kp M     &kp F       &kp P      &kp BACKSPACE
-&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT                   &kp LSHIFT    &mo 2             &kp C_VOL_DN      &kp C_PP                            &kp ENTER  &kp SPACE                     &kp UP       &kp DOWN  &kp GT      &kp RBKT   &mo 3
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5        &trans                                                                                                              &mo 4         &kp N6           &e_7_Fslash  &kp N8    &e_9_minus  &e_0_plus  &kp UNDER
+&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR   &kp BACKSLASH                                                                                                       &kp KP_SLASH  &e_DQT_RPAR      &kp L        &kp D     &kp W       &kp V      &kp Z
+&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi   &kp AMPS       &kp LEFT_CONTROL  &hold_quick_tap LWIN LS(LG(S))      &hold_quick_tap LEFT_GUI LS(LG(S))  &kp RCTRL  &kp PIPE      &e_period_colon  &kp H        &kp T     &kp S       &kp N      &kp Q
+&kp DEL    &kp G     &kp X   &kp J     &kp K      &kp KP_EQUAL                                   &c_vol_up_down_tap_dance            &pp_next_prev_tap_dance                                      &e_Qmark_Excl    &kp R        &kp M     &kp F       &kp P      &kp BACKSPACE
+&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT                &kp LSHIFT     &mo 2             &kp LEFT_ALT                        &kp LEFT_ALT                        &kp ENTER  &kp SPACE                      &kp UP       &kp DOWN  &kp GT      &kp RBKT   &mo 3
             >;
         };
 
         keypad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp INSERT                                      &kp KP_CLEAR  &kp CARET  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                          &trans        &trans     &kp N7         &kp N8           &kp N9        &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans  &trans  &trans        &trans     &kp N4         &kp N5           &kp N6        &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                      &trans      &trans                        &trans     &kp N1         &kp N2           &kp N3        &kp ENTER  &trans
-&trans  &trans  &trans  &trans  &trans          &trans      &trans  &trans      &trans  &trans  &kp N0                   &trans         &trans           &kp DOT       &kp ENTER  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp INSERT                                      &kp KP_NUMLOCK  &kp CARET  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS  &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                          &trans          &trans     &kp N7         &kp N8           &kp N9        &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans  &trans  &trans          &trans     &kp N4         &kp N5           &kp N6        &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans      &trans                          &trans     &kp KP_N1      &kp N2           &kp N3        &kp ENTER  &trans
+&trans  &trans  &trans  &trans  &trans          &trans      &trans  &trans      &trans  &trans  &kp N0                     &trans         &trans           &kp DOT       &kp ENTER  &trans
             >;
         };
 
@@ -265,7 +264,7 @@
             bindings = <
 &kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5     &trans                                                                                        &mo 4        &kp N6        &kp N7  &kp N8    &kp N9  &kp N0    &kp PERCENT
 &kp TAB    &kp B     &kp Y   &kp O     &kp U      &kp SQT    &kp BACKSLASH                                                                                 &key_repeat  &kp DQT       &kp L   &kp D     &kp W   &kp V     &kp Z
-&kp ESC    &kp C     &kp I   &kp E     &kp A      &kp COMMA  &kp AMPERSAND  &kp LEFT_CONTROL  &TapKey_HoldMod LALT LS(LG(S))      &kp LEFT_ALT  &kp RCTRL  &kp CAPS     &kp PERIOD    &kp H   &kp T     &kp S   &kp N     &kp Q
+&kp ESC    &kp C     &kp I   &kp E     &kp A      &kp COMMA  &kp AMPERSAND  &kp LEFT_CONTROL  &hold_quick_tap LALT LS(LG(S))      &kp LEFT_ALT  &kp RCTRL  &kp CAPS     &kp PERIOD    &kp H   &kp T     &kp S   &kp N     &kp Q
 &kp DEL    &kp G     &kp X   &kp J     &kp K      &kp UNDER                                   &kp PG_UP                           &kp LWIN                              &kp QUESTION  &kp R   &kp M     &kp F   &kp P     &kp BACKSPACE
 &mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT             &mo 6          &mo 0             &kp PG_DN                           &mo 0         &kp ENTER  &kp SPACE                  &kp UP  &kp DOWN  &kp GT  &kp RBKT  &mo 3
             >;
