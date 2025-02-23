@@ -206,15 +206,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        e_backslash: e_backslash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "E_BACKSLASH";
-            bindings = <&kp BACKSLASH>, <&kp BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     macros {
