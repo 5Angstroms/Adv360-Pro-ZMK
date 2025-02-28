@@ -126,7 +126,7 @@
         e_7_Fslash: e_7_Fslash {
             compatible = "zmk,behavior-mod-morph";
             label = "E_7_FSLASH";
-            bindings = <&kp N7>, <&kp LS(KP_SLASH)>;
+            bindings = <&kp N7>, <&kp KP_SLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -135,7 +135,7 @@
         e_9_minus: e_9_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "E_9_MINUS";
-            bindings = <&kp N9>, <&kp LS(KP_MINUS)>;
+            bindings = <&kp N9>, <&kp KP_MINUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -144,7 +144,7 @@
         e_0_plus: e_0_plus {
             compatible = "zmk,behavior-mod-morph";
             label = "E_0_PLUS";
-            bindings = <&kp N0>, <&kp LS(KP_PLUS)>;
+            bindings = <&kp N0>, <&kp KP_PLUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -206,6 +206,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        e_6_caret: e_6_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_6_CARET";
+            bindings = <&kp NUMBER_6>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        e_8_star: e_8_star {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_8_STAR";
+            bindings = <&kp N8>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -223,23 +241,23 @@
     keymap {
         compatible = "zmk,keymap";
 
+        engram {
+            bindings = <
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &to 1                                                                                                &mo 4         &e_6_caret       &e_7_Fslash  &e_8_star  &e_9_minus  &e_0_plus  &kp UNDER
+&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR  &e_backslash                                                                                         &kp KP_SLASH  &e_DQT_RPAR      &kp L        &kp D      &kp W       &kp V      &kp Z
+&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi  &kp AMPS      &kp LEFT_CONTROL  &Gui_screen_cap_tap_dance      &Gui_screen_cap_tap_dance  &kp RCTRL  &kp PIPE      &e_period_colon  &kp H        &kp T      &kp S       &kp N      &kp Q
+&kp DEL    &kp G     &kp X   &kp J     &kp K      &e_equals                                    &c_vol_up_down_tap_dance       &pp_next_prev_tap_dance                             &e_Qmark_Excl    &kp R        &kp M      &kp F       &kp P      &kp BACKSPACE
+&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT               &kp LSHIFT    &mo 2             &kp LEFT_ALT                   &kp LEFT_ALT               &kp ENTER  &kp SPACE                      &kp UP       &kp DOWN   &kp GT      &kp RBKT   &mo 3
+            >;
+        };
+
         qwerty {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                &mo 4        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &to 0                                                                 &mo 4        &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &none                                                                 &key_repeat  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &none           &kp LEFT_CONTROL  &kp LALT      &kp LGUI   &kp RCTRL  &kp CAPS     &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp DEL    &kp Z      &kp X   &kp C     &kp V      &kp B                                     &kp HOME      &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp BACKSPACE
 &mo 3      &kp GRAVE  &mo 2   &kp LEFT  &kp RIGHT          &kp LEFT_SHIFT  &mo 2             &kp END       &kp PG_DN  &kp ENTER  &kp SPACE            &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
-            >;
-        };
-
-        engram {
-            bindings = <
-&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &trans                                                                                               &mo 4         &kp N6           &e_7_Fslash  &kp N8    &e_9_minus  &e_0_plus  &kp UNDER
-&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR  &e_backslash                                                                                         &kp KP_SLASH  &e_DQT_RPAR      &kp L        &kp D     &kp W       &kp V      &kp Z
-&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi  &kp AMPS      &kp LEFT_CONTROL  &Gui_screen_cap_tap_dance      &Gui_screen_cap_tap_dance  &kp RCTRL  &kp PIPE      &e_period_colon  &kp H        &kp T     &kp S       &kp N      &kp Q
-&kp DEL    &kp G     &kp X   &kp J     &kp K      &e_equals                                    &c_vol_up_down_tap_dance       &pp_next_prev_tap_dance                             &e_Qmark_Excl    &kp R        &kp M     &kp F       &kp P      &kp BACKSPACE
-&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT               &kp LSHIFT    &mo 2             &kp LEFT_ALT                   &kp LEFT_ALT               &kp ENTER  &kp SPACE                      &kp UP       &kp DOWN  &kp GT      &kp RBKT   &mo 3
             >;
         };
 
