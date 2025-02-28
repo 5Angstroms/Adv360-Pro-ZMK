@@ -126,7 +126,7 @@
         e_7_Fslash: e_7_Fslash {
             compatible = "zmk,behavior-mod-morph";
             label = "E_7_FSLASH";
-            bindings = <&kp N7>, <&kp SLASH>;
+            bindings = <&kp N7>, <&kp KP_SLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -135,7 +135,7 @@
         e_9_minus: e_9_minus {
             compatible = "zmk,behavior-mod-morph";
             label = "E_9_MINUS";
-            bindings = <&kp N9>, <&kp MINUS>;
+            bindings = <&kp N9>, <&kp LS(KP_MINUS)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -162,7 +162,7 @@
         e_slash: e_slash {
             compatible = "zmk,behavior-mod-morph";
             label = "E_SLASH";
-            bindings = <&kp SLASH>, <&kp SLASH>;
+            bindings = <&kp SLASH>, <&kp LS(KP_SLASH)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
