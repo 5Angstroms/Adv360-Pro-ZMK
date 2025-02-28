@@ -126,7 +126,7 @@
         e_7_Fslash: e_7_Fslash {
             compatible = "zmk,behavior-mod-morph";
             label = "E_7_FSLASH";
-            bindings = <&kp N7>, <&kp KP_SLASH>;
+            bindings = <&kp N7>, <&kp LS(KP_SLASH)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -144,7 +144,7 @@
         e_0_plus: e_0_plus {
             compatible = "zmk,behavior-mod-morph";
             label = "E_0_PLUS";
-            bindings = <&kp N0>, <&kp PLUS>;
+            bindings = <&kp N0>, <&kp LS(KP_PLUS)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
