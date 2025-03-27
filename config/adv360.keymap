@@ -264,11 +264,11 @@
 
         engram {
             bindings = <
-&kp GRAVE  &kp V     &kp Z   &kp N3    &kp TAB    &kp DELETE   &to 1                                                                                                                                       &mo 4                              &kp BACKSPACE    &kp TAB  &e_8_star  &e_9_minus  &e_0_plus  &kp UNDER
-&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR  &e_backslash                                                                                                                                &kp KP_SLASH                       &e_DQT_RPAR      &kp L    &kp D      &kp W       &kp V      &kp Z
-&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi  &kp AMPS                          &kp LEFT_CONTROL       &Gui_screen_cap_tap_dance      &Gui_screen_cap_tap_dance  &kp RCTRL                &kp PIPE                           &e_period_colon  &kp H    &kp T      &kp S       &kp N      &kp Q
-&none      &kp G     &kp X   &kp J     &kp K      &e_equals                                                             &kp TAB                        &kp TAB                                                                                &e_Qmark_Excl    &kp R    &kp M      &kp F       &kp P      &none
-&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT               &hold_kp_tap_kp LEFT_SHIFT SPACE  &hold_mo_tap_kp 2 TAB  &kp LEFT_ALT                   &kp RIGHT_ALT              &hold_mo_tap_kp 7 ENTER  &hold_kp_tap_kp RIGHT_SHIFT SPACE                   &kp UP   &kp DOWN   &kp GT      &kp RBKT   &mo 3
+&kp GRAVE  &none     &none   &kp BACKSPACE  &none      &kp DELETE   &to 1                                                                                                                                       &mo 4                              &kp DELETE       &none   &kp BACKSPACE  &none   &none     &kp UNDER
+&kp Z      &kp B     &kp Y   &kp O          &kp U      &e_SQT_LPAR  &e_backslash                                                                                                                                &kp KP_SLASH                       &e_DQT_RPAR      &kp L   &kp D          &kp W   &kp V     &kp Z
+&kp ESC    &kp C     &kp I   &kp E          &kp A      &e_com_semi  &kp AMPS                          &kp LEFT_CONTROL       &Gui_screen_cap_tap_dance      &Gui_screen_cap_tap_dance  &kp RCTRL                &kp PIPE                           &e_period_colon  &kp H   &kp T          &kp S   &kp N     &kp Q
+&kp V      &kp G     &kp X   &kp J          &kp K      &e_equals                                                             &c_vol_up_down_tap_dance       &pp_next_prev_tap_dance                                                                &e_Qmark_Excl    &kp R   &kp M          &kp F   &kp P     &none
+&mo 3      &kp LBKT  &kp LT  &kp LEFT       &kp RIGHT               &hold_kp_tap_kp LEFT_SHIFT SPACE  &hold_mo_tap_kp 2 TAB  &kp LEFT_ALT                   &kp RIGHT_ALT              &hold_mo_tap_kp 7 ENTER  &hold_kp_tap_kp RIGHT_SHIFT SPACE                   &kp UP  &kp DOWN       &kp GT  &kp RBKT  &mo 3
             >;
         };
 
