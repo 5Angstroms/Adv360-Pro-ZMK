@@ -257,6 +257,16 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <67 68>;
         };
+
+        C_ENTER {
+            bindings = <&kp ENTER>;
+            key-positions = <32 41>;
+        };
+
+        C_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <31 42>;
+        };
     };
 
     keymap {
@@ -264,11 +274,11 @@
 
         engram {
             bindings = <
-&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &to 1                                                                                                                                          &mo 4                    &e_6_caret       &e_7_Fslash  &e_8_star  &e_9_minus  &e_0_plus  &kp UNDER
-&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR  &e_backslash                                                                                                                                   &kp KP_SLASH             &e_DQT_RPAR      &kp L        &kp D      &kp W       &kp V      &kp Z
-&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi  &kp AMPS                 &kp LEFT_CONTROL                &kp TAB             &Gui_screen_cap_tap_dance  &kp RCTRL                              &kp PIPE                 &e_period_colon  &kp H        &kp T      &kp S       &kp N      &kp Q
-&kp DEL    &kp G     &kp X   &kp J     &kp K      &e_equals                                                             &kp LEFT_ALT        &kp RIGHT_ALT                                                                              &e_Qmark_Excl    &kp R        &kp M      &kp F       &kp P      &kp BACKSPACE
-&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT               &hold_mo_tap_kp 2 ENTER  &hold_kp_tap_kp LEFT_SHIFT DEL  &kp LEFT_SHIFT      &kp RIGHT_SHIFT            &hold_kp_tap_kp RIGHT_SHIFT BACKSPACE  &hold_mo_tap_kp 7 SPACE                   &kp UP       &kp DOWN   &kp GT      &kp RBKT   &mo 3
+&kp GRAVE  &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &to 1                                                                                                                                              &mo 4                              &e_6_caret       &e_7_Fslash  &e_8_star  &e_9_minus  &e_0_plus  &kp UNDER
+&kp TAB    &kp B     &kp Y   &kp O     &kp U      &e_SQT_LPAR  &e_backslash                                                                                                                                       &kp KP_SLASH                       &e_DQT_RPAR      &kp L        &kp D      &kp W       &kp V      &kp Z
+&kp ESC    &kp C     &kp I   &kp E     &kp A      &e_com_semi  &kp AMPS                           &kp LEFT_CONTROL             &Gui_screen_cap_tap_dance      &Gui_screen_cap_tap_dance  &kp RCTRL                &kp PIPE                           &e_period_colon  &kp H        &kp T      &kp S       &kp N      &kp Q
+&none      &kp G     &kp X   &kp J     &kp K      &e_equals                                                                    &kp TAB                        &kp TAB                                                                                &e_Qmark_Excl    &kp R        &kp M      &kp F       &kp P      &none
+&mo 3      &kp LBKT  &kp LT  &kp LEFT  &kp RIGHT               &hold_kp_tap_kp LEFT_SHIFT DELETE  &hold_mo_tap_kp 2 BACKSPACE  &kp LEFT_ALT                   &kp RIGHT_ALT              &hold_mo_tap_kp 7 ENTER  &hold_kp_tap_kp RIGHT_SHIFT SPACE                   &kp UP       &kp DOWN   &kp GT      &kp RBKT   &mo 3
             >;
         };
 
