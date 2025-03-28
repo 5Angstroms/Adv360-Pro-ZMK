@@ -245,6 +245,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        hold_kp_tap_kp_tap_preferred: hold_kp_tap_kp_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_KP_TAP_KP_TAP_PREFERRED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -269,11 +279,11 @@
 
         engram {
             bindings = <
-&none       &none  &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE  &kp DELETE   &to 1                                                                                                                                       &mo 4                              &kp DELETE       &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE  &none  &none
-&kp Z       &kp B  &kp Y          &kp O          &kp U          &e_SQT_LPAR  &none                                                                                                                                       &none                              &e_DQT_RPAR      &kp L          &kp D          &kp W          &kp V  &kp Z
-&kp V       &kp C  &kp I          &kp E          &kp A          &e_com_semi  &none                             &kp LEFT_CONTROL       &Gui_screen_cap_tap_dance      &Gui_screen_cap_tap_dance  &kp RCTRL                &none                              &e_period_colon  &kp H          &kp T          &kp S          &kp N  &kp Q
-&kp DELETE  &kp G  &kp X          &kp J          &kp K          &e_equals                                                             &c_vol_up_down_tap_dance       &pp_next_prev_tap_dance                                                                &e_Qmark_Excl    &kp R          &kp M          &kp F          &kp P  &kp BACKSPACE
-&none       &none  &mo 3          &kp LEFT       &kp RIGHT                   &hold_kp_tap_kp LEFT_SHIFT SPACE  &hold_mo_tap_kp 2 TAB  &kp LEFT_ALT                   &kp RIGHT_ALT              &hold_mo_tap_kp 7 ENTER  &hold_kp_tap_kp RIGHT_SHIFT SPACE                   &kp UP         &kp DOWN       &mo 3          &none  &none
+&none       &none  &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE  &kp DELETE   &to 1                                                                                                                                       &mo 4                                            &kp DELETE       &kp BACKSPACE  &kp BACKSPACE  &kp BACKSPACE  &none  &none
+&kp Z       &kp B  &kp Y          &kp O          &kp U          &e_SQT_LPAR  &none                                                                                                                                       &none                                            &e_DQT_RPAR      &kp L          &kp D          &kp W          &kp V  &kp Z
+&kp V       &kp C  &kp I          &kp E          &kp A          &e_com_semi  &none                             &kp LEFT_CONTROL       &Gui_screen_cap_tap_dance      &Gui_screen_cap_tap_dance  &kp RCTRL                &none                                            &e_period_colon  &kp H          &kp T          &kp S          &kp N  &kp Q
+&kp DELETE  &kp G  &kp X          &kp J          &kp K          &e_equals                                                             &c_vol_up_down_tap_dance       &pp_next_prev_tap_dance                                                                              &e_Qmark_Excl    &kp R          &kp M          &kp F          &kp P  &kp BACKSPACE
+&none       &none  &mo 3          &kp LEFT       &kp RIGHT                   &hold_kp_tap_kp LEFT_SHIFT SPACE  &hold_mo_tap_kp 2 TAB  &kp LEFT_ALT                   &kp RIGHT_ALT              &hold_mo_tap_kp 7 ENTER  &hold_kp_tap_kp_tap_preferred RIGHT_SHIFT SPACE                   &kp UP         &kp DOWN       &mo 3          &none  &none
             >;
         };
 
