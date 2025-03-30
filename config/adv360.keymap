@@ -396,11 +396,11 @@
 
         engram {
             bindings = <
-&none       &none  &none  &none  &none  &none        &none                                                             &mo 4      &none            &none  &none  &none  &none  &none
-&caps_word  &kp B  &kp Y  &kp O  &kp U  &e_SQT_LPAR  &none                                                             &none      &e_DQT_RPAR      &kp L  &kp D  &kp W  &kp V  &none
-&none       &kp C  &kp I  &kp E  &kp A  &e_com_semi  &none                             &none  &none      &none  &none  &none      &e_period_colon  &kp H  &kp T  &kp S  &kp N  &none
-&none       &kp G  &kp X  &kp J  &kp K  &e_equals                                             &none      &none                    &e_Qmark_Excl    &kp R  &kp M  &kp F  &kp P  &none
-&none       &none  &none  &none  &none               &hold_kp_tap_repeat LEFT_SHIFT 0  &mo 9  &none      &none  &mo 9  &kp SPACE                   &none  &none  &none  &none  &none
+&none       &none  &none  &none  &none  &none        &none                                                                       &mo 4      &none            &none  &none  &none  &none  &none
+&caps_word  &kp B  &kp Y  &kp O  &kp U  &e_SQT_LPAR  &none                                                                       &none      &e_DQT_RPAR      &kp L  &kp D  &kp W  &kp V  &none
+&none       &kp C  &kp I  &kp E  &kp A  &e_com_semi  &none                                       &none  &none      &none  &none  &none      &e_period_colon  &kp H  &kp T  &kp S  &kp N  &none
+&none       &kp G  &kp X  &kp J  &kp K  &e_equals                                                       &none      &none                    &e_Qmark_Excl    &kp R  &kp M  &kp F  &kp P  &none
+&none       &none  &none  &none  &none               &hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT  &mo 9  &none      &none  &mo 9  &kp SPACE                   &none  &none  &none  &none  &none
             >;
         };
 
