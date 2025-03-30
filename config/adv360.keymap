@@ -292,6 +292,35 @@
             #binding-cells = <2>;
             tapping-term-ms = <280>;
         };
+
+        hold_mod_sticky_mod: hold_mod_sticky_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_MOD_STICKY_MOD";
+            bindings = <&kp>, <&sticky_mod>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+        };
+
+        sticky_mod: sticky_mod {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_MOD";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            ignore-modifiers;
+            release-after-ms = <1000>;
+        };
+
+        hold_mo_tap_repeat: hold_mo_tap_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_MO_TAP_REPEAT";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -358,11 +387,11 @@
 
         engram {
             bindings = <
-&none       &none              &kp BACKSPACE      &kp BACKSPACE        &kp BACKSPACE          &kp DELETE   &none                                                                             &mo 4      &kp DELETE       &kp BACKSPACE           &kp BACKSPACE         &kp BACKSPACE      &none              &none
-&caps_word  &kp B              &kp Y              &kp O                &kp U                  &e_SQT_LPAR  &none                                                                             &none      &e_DQT_RPAR      &kp L                   &kp D                 &kp W              &kp V              &none
-&kp Z       &HRM_L LEFT_GUI C  &HRM_L LEFT_ALT I  &HRM_L LEFT_SHIFT E  &HRM_L LEFT_CONTROL A  &e_com_semi  &none           &none                  &none      &none  &none                    &none      &e_period_colon  &HRM_R RIGHT_CONTROL H  &HRM_R RIGHT_SHIFT T  &HRM_R LEFT_ALT S  &HRM_R LEFT_GUI N  &kp Q
-&to 0       &kp G              &kp X              &kp J                &kp K                  &e_equals                                           &none      &none                                      &e_Qmark_Excl    &kp R                   &kp M                 &kp F              &kp P              &to 3
-&none       &none              &none              &none                &none                               &kp LEFT_SHIFT  &hold_mo_tap_kp 1 TAB  &none      &none  &hold_mo_tap_kp 2 ENTER  &kp SPACE                   &none                   &none                 &none              &none              &none
+&none       &none  &none  &none  &none  &none        &none                                                                               &mo 4      &none            &none  &none  &none  &none  &none
+&caps_word  &kp B  &kp Y  &kp O  &kp U  &e_SQT_LPAR  &none                                                                               &none      &e_DQT_RPAR      &kp L  &kp D  &kp W  &kp V  &none
+&none       &kp C  &kp I  &kp E  &kp A  &e_com_semi  &none           &none                    &none      &none  &none                    &none      &e_period_colon  &kp H  &kp T  &kp S  &kp N  &none
+&none       &kp G  &kp X  &kp J  &kp K  &e_equals                                             &none      &none                                      &e_Qmark_Excl    &kp R  &kp M  &kp F  &kp P  &none
+&none       &none  &none  &none  &none               &kp LEFT_SHIFT  &hold_mo_tap_repeat 9 0  &none      &none  &hold_mo_tap_kp 9 ENTER  &kp SPACE                   &none  &none  &none  &none  &none
             >;
         };
 
@@ -443,6 +472,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&none  &none                                   &none                                   &none                                       &none                                           &none                    &none                                     &none   &none           &none     &none      &none      &none      &none
+&none  &none                                   &none                                   &kp LG(LC(LEFT_ARROW))                      &kp LG(LC(RIGHT_ARROW))                         &kp C_VOL_UP             &none                                     &none   &msc SCRL_UP    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &hold_mod_sticky_mod LEFT_GUI LEFT_GUI  &hold_mod_sticky_mod LEFT_ALT LEFT_ALT  &hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT  &hold_mod_sticky_mod LEFT_CONTROL LEFT_CONTROL  &kp C_VOL_DN             &none   &none   &none      &none  &none   &none   &msc SCRL_DOWN  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
+&none  &none                                   &none                                   &none                                       &none                                           &pp_next_prev_tap_dance                  &none      &none                  &kp RET         &kp BSPC  &kp Z      &kp Q      &kp DEL    &none
+&none  &none                                   &none                                   &none                                       &none                                                                    &trans  &trans  &none      &none  &trans  &trans                  &none     &none      &none      &none      &none
             >;
         };
     };
