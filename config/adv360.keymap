@@ -366,21 +366,15 @@
             require-prior-idle-ms = <150>;
         };
 
-        C_ {
+        C_UNDO {
             bindings = <&kp LC(Z)>;
-            key-positions = <16 17>;
+            key-positions = <32 33>;
             require-prior-idle-ms = <150>;
         };
 
         C_REDO {
             bindings = <&kp LC(Y)>;
-            key-positions = <18 17>;
-            require-prior-idle-ms = <150>;
-        };
-
-        C_TO_LAYER_0 {
-            bindings = <&to 0>;
-            key-positions = <46 59>;
+            key-positions = <18 19>;
             require-prior-idle-ms = <150>;
         };
 
