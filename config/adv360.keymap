@@ -404,9 +404,9 @@
             bindings = <
 &none                                       &none  &none  &none  &none                 &none        &none                                                                      &mo 5      &none            &none                 &none  &none  &none  &none
 &kp CAPS                                    &kp B  &kp Y  &kp O  &kp U                 &e_SQT_LPAR  &none                                                                      &none      &e_DQT_RPAR      &kp L                 &kp D  &kp W  &kp V  &kp Z
-&caps_word                                  &kp C  &kp I  &kp E  &kp A                 &e_com_semi  &none        &none                 &none      &none  &none                 &none      &e_period_colon  &kp H                 &kp T  &kp S  &kp N  &kp Q
+&caps_word                                  &kp C  &kp I  &kp E  &kp A                 &e_com_semi  &none                 &none        &none      &none  &none                 &none      &e_period_colon  &kp H                 &kp T  &kp S  &kp N  &kp Q
 &hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT  &kp G  &kp X  &kp J  &kp K                 &e_equals                                       &none      &none                                   &e_Qmark_Excl    &kp R                 &kp M  &kp F  &kp P  &hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT
-&none                                       &none  &none  &none  &hold_L_sticky_L 1 1               &key_repeat  &hold_L_sticky_L 4 4  &none      &none  &hold_L_sticky_L 2 2  &kp SPACE                   &hold_L_sticky_L 3 3  &none  &none  &none  &none
+&none                                       &none  &none  &none  &hold_L_sticky_L 1 1               &hold_L_sticky_L 4 4  &key_repeat  &none      &none  &hold_L_sticky_L 2 2  &kp SPACE                   &hold_L_sticky_L 3 3  &none  &none  &none  &none
             >;
         };
 
