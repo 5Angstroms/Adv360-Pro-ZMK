@@ -402,21 +402,21 @@
 
         engram {
             bindings = <
-&none                                       &none  &none  &none  &none                 &none        &none                                                       &mo 5      &none            &none                 &none  &none  &none  &none
-&kp CAPS                                    &kp B  &kp Y  &kp O  &kp U                 &e_SQT_LPAR  &none                                                       &none      &e_DQT_RPAR      &kp L                 &kp D  &kp W  &kp V  &kp Z
-&caps_word                                  &kp C  &kp I  &kp E  &kp A                 &e_com_semi  &none  &none        &none      &none  &none                 &none      &e_period_colon  &kp H                 &kp T  &kp S  &kp N  &kp Q
-&hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT  &kp G  &kp X  &kp J  &kp K                 &e_equals                        &none      &none                                   &e_Qmark_Excl    &kp R                 &kp M  &kp F  &kp P  &hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT
-&none                                       &none  &none  &none  &hold_L_sticky_L 1 1               &sl 4  &key_repeat  &none      &none  &hold_L_sticky_L 2 2  &kp SPACE                   &hold_L_sticky_L 3 3  &none  &none  &none  &none
+&none                   &none  &none  &none  &none  &none        &none                                        &mo 5      &none            &none  &none  &none  &none  &none
+&kp CAPS                &kp B  &kp Y  &kp O  &kp U  &e_SQT_LPAR  &none                                        &none      &e_DQT_RPAR      &kp L  &kp D  &kp W  &kp V  &kp Z
+&caps_word              &kp C  &kp I  &kp E  &kp A  &e_com_semi  &none  &none        &none      &none  &none  &none      &e_period_colon  &kp H  &kp T  &kp S  &kp N  &kp Q
+&sticky_mod LEFT_SHIFT  &kp G  &kp X  &kp J  &kp K  &e_equals                        &none      &none                    &e_Qmark_Excl    &kp R  &kp M  &kp F  &kp P  &sticky_mod LEFT_SHIFT
+&none                   &none  &none  &none  &sl 1               &sl 4  &key_repeat  &none      &none  &sl 2  &kp SPACE                   &sl 3  &none  &none  &none  &none
             >;
         };
 
         numpad {
             bindings = <
-&trans  &trans                                  &trans                                  &trans                                      &trans                                          &trans  &kp INSERT                                      &trans  &trans        &trans     &trans     &trans     &trans           &trans
-&trans  &trans                                  &trans                                  &trans                                      &trans                                          &trans  &trans                                          &trans  &kp KP_SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &trans
-&trans  &hold_mod_sticky_mod LEFT_GUI LEFT_GUI  &hold_mod_sticky_mod LEFT_ALT LEFT_ALT  &hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT  &hold_mod_sticky_mod LEFT_CONTROL LEFT_CONTROL  &trans  &trans      &trans  &trans      &trans  &trans  &trans  &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp PLUS         &trans
-&trans  &trans                                  &trans                                  &trans                                      &trans                                          &trans                      &trans      &trans                  &kp KP_NUM    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp DOT          &trans
-&trans  &trans                                  &trans                                  &trans                                      &trans                                                  &trans      &trans  &trans      &trans  &trans  &trans                &kp KP_N0  &trans     &trans     &trans           &trans
+&trans  &trans                &trans                &trans                  &trans                    &trans  &kp INSERT                                      &trans  &trans        &trans     &trans     &trans     &trans           &trans
+&trans  &trans                &trans                &trans                  &trans                    &trans  &trans                                          &trans  &kp KP_SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &trans
+&trans  &sticky_mod LEFT_GUI  &sticky_mod LEFT_ALT  &sticky_mod LEFT_SHIFT  &sticky_mod LEFT_CONTROL  &trans  &trans      &trans  &trans      &trans  &trans  &trans  &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp PLUS         &trans
+&trans  &trans                &trans                &trans                  &trans                    &trans                      &trans      &trans                  &kp KP_NUM    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp DOT          &trans
+&trans  &trans                &trans                &trans                  &trans                            &trans      &trans  &trans      &trans  &trans  &trans                &kp KP_N0  &trans     &trans     &trans           &trans
             >;
         };
 
@@ -432,11 +432,11 @@
 
         fn {
             bindings = <
-&trans  &trans                                  &trans                                  &trans                                      &trans                                          &trans                   &none                                       &none   &trans          &trans    &trans         &trans       &trans     &trans
-&trans  &kp F1                                  &kp F2                                  &kp F3                                      &kp F4                                          &kp F5                   &trans                                      &trans  &kp F6          &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
-&trans  &hold_mod_sticky_mod LEFT_GUI LEFT_GUI  &hold_mod_sticky_mod LEFT_ALT LEFT_ALT  &hold_mod_sticky_mod LEFT_SHIFT LEFT_SHIFT  &hold_mod_sticky_mod LEFT_CONTROL LEFT_CONTROL  &kp LG(LC(RIGHT_ARROW))  &trans  &trans  &trans      &trans  &trans  &trans  &msc SCRL_UP    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp F12
-&trans  &kp NUMBER_1                            &kp NUMBER_2                            &kp NUMBER_3                                &kp NUMBER_4                                    &kp NUMBER_5                             &trans      &trans                  &msc SCRL_DOWN  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
-&trans  &trans                                  &trans                                  &trans                                      &trans                                                                   &trans  &trans  &trans      &trans  &trans  &trans                  &trans    &trans         &trans       &trans     &trans
+&trans  &trans                &trans                &trans                  &trans                    &trans                   &none                                       &none   &trans          &trans    &trans         &trans       &trans     &trans
+&trans  &kp F1                &kp F2                &kp F3                  &kp F4                    &kp F5                   &trans                                      &trans  &kp F6          &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
+&trans  &sticky_mod LEFT_GUI  &sticky_mod LEFT_ALT  &sticky_mod LEFT_SHIFT  &sticky_mod LEFT_CONTROL  &kp LG(LC(RIGHT_ARROW))  &trans  &trans  &trans      &trans  &trans  &trans  &msc SCRL_UP    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp F12
+&trans  &kp NUMBER_1          &kp NUMBER_2          &kp NUMBER_3            &kp NUMBER_4              &kp NUMBER_5                             &trans      &trans                  &msc SCRL_DOWN  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+&trans  &trans                &trans                &trans                  &trans                                             &trans  &trans  &trans      &trans  &trans  &trans                  &trans    &trans         &trans       &trans     &trans
             >;
         };
 
