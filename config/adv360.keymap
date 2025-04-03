@@ -411,7 +411,7 @@
             bindings = <
 &none                   &none    &none      &none      &none      &none     &trans                                  &mo 6      &none  &none  &none  &none  &none  &none
 &kp GRAVE               &kp Q    &kp Y      &kp O      &kp U      &kp SEMI  &none                                   &none      &kp X  &kp L  &kp D  &kp W  &kp Z  &kp BSLH
-&kp B                   &kp C    &kp I      &kp E      &kp A      &kp DOT   &none   &none  &none      &none  &none  &none      &kp K  &kp H  &kp T  &kp S  &kp N  &kp V
+&kp B                   &kp C    &kp I      &kp E      &kp A      &kp DOT   &none   &none  &none      &none  &none  &none      &kp K  &kp H  &kp T  &kp N  &kp S  &kp V
 &sticky_mod LEFT_SHIFT  &kp SQT  &kp MINUS  &kp EQUAL  &kp COMMA  &kp FSLH                 &none      &none                    &kp J  &kp M  &kp G  &kp P  &kp F  &sticky_mod LEFT_SHIFT
 &none                   &none    &none      &none      &mo 3                &kp R   &mo 4  &none      &none  &sl 2  &kp SPACE         &mo 5  &none  &none  &none  &none
             >;
