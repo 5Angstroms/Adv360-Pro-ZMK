@@ -362,11 +362,6 @@
             key-positions = <51 54>;
         };
 
-        C_ESCAPE {
-            bindings = <&kp ESCAPE>;
-            key-positions = <65 70>;
-        };
-
         C_COPY {
             bindings = <&kp LC(C)>;
             key-positions = <48 49>;
